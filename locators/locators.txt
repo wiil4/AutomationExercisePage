@@ -1,0 +1,52 @@
+//HomePage
+Assertion - Visible- GetTitle() = "Automation Exercise"
+buttonLogin = //a[contains(@href,'login')]
+
+------Assertion - Visible - Logged in as 'username'
+loggedInAsText = //b/preceding-sibling::text()
+usernameText = b
+----------------------
+deleteAccountButton = //a[text()=' Delete Account']
+
+//DeleteAccountPage
+Assertion - Visible accountDeletedText = //b[text()='Account Deleted!']
+continueButton = //a[text()='Continue']
+
+//LoginPage - SignUp
+Assertion - Visible = //h2[text()='New User Signup!']
+nameInput = By.name(name)
+emailSignupInput = //input[@data-qa='signup-email']
+signupButton = //button[@data-qa='signup-button']
+
+//signupPage
+Assertion - Visible = //b[text()='Enter Account Information']
+radioGenderMr = By.id("id_gender1")
+radioGenderMrs = By.id("id_gender2")
+nameInput = By.id("name")
+passwordInput = By.id("password")
+dayDropdown = By.id("days")
+monthDropdown = By.id("months")
+yearDropdown = By.id("years")
+newsletterBox = By.id("newsletter")
+offersBox = By.id("optin")
+firstnameField = By.id("first_name")
+lastnameField = By.id("last_name")
+companyField = By.id("company")
+address1Field = By.id("address1")
+address2Field = By.id("address2")
+countryDropdown = By.id("country")
+stateField = By.id("state")
+cityField = By.id("city")
+zipcodeField = By.id("zipcode")
+mobileNumberField = By.id("mobile_number")
+createAccountButton = //button[text()='Create Account']
+
+//AccountCreatePage
+Assertion - Visible = //b[text()='Account Created!']
+continueButton = //a[text()='Continue']
+
+
+
+
+
+
