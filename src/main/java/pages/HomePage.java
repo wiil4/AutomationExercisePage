@@ -8,6 +8,7 @@ public class HomePage extends BasePage{
     private final By loginInAsText = By.xpath("//b/preceding-sibling::text()");
     private final By usernameText = By.tagName("b");
     private final By deleteAccountButton = By.xpath("//a[text()=' Delete Account']");
+    private final By logoutButton = By.xpath("//a[contains(@href,'logout')]");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -20,5 +21,8 @@ public class HomePage extends BasePage{
     }
     public void clickOnDeleteAccount(){
         clickOn(deleteAccountButton);
+    }
+    public void clickOnLogout(){
+        clickOn(logoutButton);
     }
 }

@@ -15,6 +15,8 @@ public class LoginPage extends BasePage{
     private final By emailLoginInput = By.xpath("//input[@data-qa='login-email']");
     private final By passwordInput = By.name("password");
     private final By loginButton = By.xpath("//button[@data-qa='login-button']");
+
+    private final By incorrectLoginLabel = By.xpath("//p[contains(text(),'incorrect!')]");
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -37,5 +39,8 @@ public class LoginPage extends BasePage{
         setText(emailLoginInput, email);
         setText(passwordInput, password);
         clickOn(loginButton);
+    }
+    public Boolean isErrorLoginDisplayed(){
+        return isControlDisplayed(incorrectLoginLabel);
     }
 }
