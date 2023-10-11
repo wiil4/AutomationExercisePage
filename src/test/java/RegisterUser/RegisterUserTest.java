@@ -46,4 +46,23 @@ public class RegisterUserTest extends BaseTest {
         Assert.assertTrue(deleteAccountPage.isAccountDeletedDisplayed(), "Expected control is not visible");
         deleteAccountPage.clickContinue();
     }
+
+    @Test(description = "Verify register user with existing mail")
+    public void registerWithExistingMail(){
+        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+
+        //HOME PAGE - VERIFY HOME PAGE IS VISIBLE SUCCESFULLY
+        Assert.assertEquals(homePage.getPageTitle(), "Automation Exercise", "Title not equal as expected");
+        homePage.clickOnLogin();
+
+        //LOGIN PAGE - VERIFY 'NEW USER SIGNUP!' IS VISIBLE
+        Assert.assertTrue(loginPage.isNewUserSignUpDisplayed(), "Expected control is not displayed");
+        String username = "valid";
+        String email = "valid@user.com";
+        loginPage.signUpWithCredentials(username, email);
+
+        //LOGIN PAGE - VERIFY 'EMAIL ADDRESS ALREADY EXISTS!' IS VISIBLE
+        Assert.assertTrue(loginPage.isErrorSigningUpDisplayed());
+    }
 }

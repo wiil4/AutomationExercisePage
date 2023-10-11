@@ -62,3 +62,7 @@ incorrectLoginLabel = //p[contains(text(),'incorrect!')]
 
 logoutButton = //a[contains(@href,'logout')]
 
+/////TC5 - EXISTING ACCOUNT SIGNUP
+
+accountExistsLabel = //p[contains(text(),'exist!')]
+
