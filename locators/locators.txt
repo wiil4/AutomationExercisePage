@@ -1,3 +1,4 @@
+TC 1 - REGISTER USER
 //HomePage
 Assertion - Visible- GetTitle() = "Automation Exercise"
 buttonLogin = //a[contains(@href,'login')]
@@ -45,8 +46,10 @@ createAccountButton = //button[text()='Create Account']
 Assertion - Visible = //b[text()='Account Created!']
 continueButton = //a[text()='Continue']
 
+//TC 2 - LOGIN USER WITH CORRECT EMAIL AND PASSWORD
 
-
-
-
-
+//LoginPage - LogIn
+Assertion - Visible = //h2[text()='Login to your account']
+emailLogInInput = //input[@data-qa='login-email']
+passwordInput = By.name("password")
+loginButton = //button[@data-qa='login-button']

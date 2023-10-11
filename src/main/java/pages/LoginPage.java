@@ -9,6 +9,12 @@ public class LoginPage extends BasePage{
     private final By nameInput = By.name("name");
     private final By emailSignUpInput = By.xpath("//input[@data-qa='signup-email']");
     private final By signUpButton = By.xpath("//button[@data-qa='signup-button']");
+
+    //LOGIN
+    private final By loginLabel = By.xpath("//h2[text()='Login to your account']");
+    private final By emailLoginInput = By.xpath("//input[@data-qa='login-email']");
+    private final By passwordInput = By.name("password");
+    private final By loginButton = By.xpath("//button[@data-qa='login-button']");
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -21,5 +27,15 @@ public class LoginPage extends BasePage{
         setText(nameInput, name);
         setText(emailSignUpInput, email);
         clickOn(signUpButton);
+    }
+
+    public Boolean isLoginAccountDisplayed(){
+        return isControlDisplayed(loginLabel);
+    }
+
+    public void loginWithCredentials(String email, String password){
+        setText(emailLoginInput, email);
+        setText(passwordInput, password);
+        clickOn(loginButton);
     }
 }

@@ -15,6 +15,7 @@ public class RegisterUserTest extends BaseTest {
         SignUpPage signUpPage = new SignUpPage(driver);
         AccountCreatePage accountCreatePage = new AccountCreatePage(driver);
         DeleteAccountPage deleteAccountPage = new DeleteAccountPage(driver);
+        FramePage framePage = new FramePage(driver);
         //HOME PAGE - VERIFY HOME PAGE IS VISIBLE SUCCESFULLY
         Assert.assertEquals(homePage.getPageTitle(), "Automation Exercise", "Title not equal as expected");
         homePage.clickOnLogin();
@@ -37,7 +38,7 @@ public class RegisterUserTest extends BaseTest {
         //ACCOUNTCREATE PAGE - VERIFY THAT 'ACCOUNT CREATED' IS VISIBLE
         Assert.assertTrue(accountCreatePage.isAccountCreatedDisplayed(), "Expected control is not visible");
         accountCreatePage.clickContinue();
-        accountCreatePage.closeAdFrame();
+        framePage.tryCloseAdFrame();
         //HOME PAGE - VERIFY THAT 'LOGGED IN AS 'USERNAME'' IS VISIBLE
         Assert.assertEquals(homePage.getLoggedInformation(), username, "The text is not as the expected");
         homePage.clickOnDeleteAccount();
