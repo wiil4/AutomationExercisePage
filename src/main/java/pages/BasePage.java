@@ -45,4 +45,8 @@ public class BasePage {
     protected void switchToMainContent(){
         driver.switchTo().defaultContent();
     }
+
+    protected void acceptAlert(){
+        driver.switchTo().alert().accept();
+    }
 }

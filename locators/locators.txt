@@ -66,3 +66,18 @@ logoutButton = //a[contains(@href,'logout')]
 
 accountExistsLabel = //p[contains(text(),'exist!')]
 
+/////TC6 - CONTACT US
+
+//HOMEPAGE
+contactusButton = //a[contains(@href,'contact_us')]
+//CONTACTUS PAGE
+Assert - Visible - //h2[text()='Get In Touch']
+name = By.name("name");
+email = By.name("email");
+subject = By.name("subject");
+message = By.name("message"); //textarea
+fileUploadButton = By.name("upload_file");   //send keys(route of the archive)
+submitButton = By.name("submit");
+
+Assert - Visible - //div[@class='contact-form']/div[contains(text(),'Success!')]
+btnHome = //a[@class='btn btn-success']

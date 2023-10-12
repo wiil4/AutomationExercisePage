@@ -9,6 +9,7 @@ public class HomePage extends BasePage{
     private final By usernameText = By.tagName("b");
     private final By deleteAccountButton = By.xpath("//a[text()=' Delete Account']");
     private final By logoutButton = By.xpath("//a[contains(@href,'logout')]");
+    private final By contactUsButton = By.xpath("//a[contains(@href,'contact_us')]");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -24,5 +25,8 @@ public class HomePage extends BasePage{
     }
     public void clickOnLogout(){
         clickOn(logoutButton);
+    }
+    public void clickOnContactUs(){
+        clickOn(contactUsButton);
     }
 }

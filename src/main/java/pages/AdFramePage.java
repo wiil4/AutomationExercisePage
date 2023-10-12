@@ -2,17 +2,12 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.xml.xpath.XPath;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FramePage extends BasePage{
+public class AdFramePage extends BasePage{
 
     private final List<By> mainAdFrames = new ArrayList<>(Arrays.asList(
             By.xpath("//iframe[@id='aswift_0']"),
@@ -22,7 +17,7 @@ public class FramePage extends BasePage{
     ));
     private final By adFrame = By.xpath("//iframe[@id='ad_iframe']");
     private final By dismissAdButton = By.xpath("//div[@id='dismiss-button']");
-    public FramePage(WebDriver driver) {
+    public AdFramePage(WebDriver driver) {
         super(driver);
     }
     public void closeAdFrame(){
