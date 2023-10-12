@@ -1,13 +1,13 @@
-package LoginUser;
+package login;
 
-import BaseTest.BaseTest;
+import baseTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DeleteAccountPage;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class LoginUserTest extends BaseTest {
+public class LoginTest extends BaseTest {
 
     @Test(description = "TC2-Verify login successful with valid credentials")
     public void loginWithValidCredentials(){

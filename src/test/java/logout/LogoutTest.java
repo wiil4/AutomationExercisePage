@@ -1,12 +1,12 @@
-package LogoutUser;
+package logout;
 
-import BaseTest.BaseTest;
+import baseTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class LogoutUserTest extends BaseTest {
+public class LogoutTest extends BaseTest {
     @Test(description = "TC4-Logout User")
     public void logoutUserTest(){
         HomePage homePage = new HomePage(driver);

@@ -1,12 +1,12 @@
-package RegisterUser;
+package register;
 
 
-import BaseTest.BaseTest;
+import baseTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class RegisterUserTest extends BaseTest {
+public class RegisterTest extends BaseTest {
 
     @Test(description = "Verify succesful user register")
     public void registerUserTest(){
