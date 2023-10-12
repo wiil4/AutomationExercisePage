@@ -38,7 +38,8 @@ public class RegisterUserTest extends BaseTest {
         //ACCOUNTCREATE PAGE - VERIFY THAT 'ACCOUNT CREATED' IS VISIBLE
         Assert.assertTrue(accountCreatePage.isAccountCreatedDisplayed(), "Expected control is not visible");
         accountCreatePage.clickContinue();
-        framePage.tryCloseAdFrame();
+
+        framePage.closeAdFrame();
         //HOME PAGE - VERIFY THAT 'LOGGED IN AS 'USERNAME'' IS VISIBLE
         Assert.assertEquals(homePage.getLoggedInformation(), username, "The text is not as the expected");
         homePage.clickOnDeleteAccount();

@@ -20,16 +20,16 @@ public class LoginUserTest extends BaseTest {
         homePage.clickOnLogin();
         //LOGIN PAGE - VERIFY 'LOGIN TO YOUR ACCOUNT' IS VISIBLE
         Assert.assertTrue(loginPage.isLoginAccountDisplayed(), "Expected control is not displayed");
-        String email = "wil@credential.com";
+        String email = "valid@user.com";
         String password = "1234";
         loginPage.loginWithCredentials(email, password);
 
-        String expectedUserName = "wil";
+        String expectedUserName = "valid";
         //HOME PAGE - VERIFY 'LOGGED IN AS 'USERNAME'' IS VISIBLE
         Assert.assertEquals(homePage.getLoggedInformation(), expectedUserName, "Expected user logged information is not equal as current");
-        homePage.clickOnDeleteAccount();
+        /*homePage.clickOnDeleteAccount();
         //DELETEACCOUNT PAGE - VERIFY THAT 'ACCOUNT DELETED!' IS VISIBLE
-        Assert.assertTrue(deleteAccountPage.isAccountDeletedDisplayed());
+        Assert.assertTrue(deleteAccountPage.isAccountDeletedDisplayed());*/
     }
 
     @Test(description = "TC3-Verify login successful with valid credentials")

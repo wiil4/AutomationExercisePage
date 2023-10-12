@@ -42,14 +42,7 @@ public class BasePage {
         driver.switchTo().frame(driver.findElement(locator));
     }
 
-    protected void switchToMainFrame(){
+    protected void switchToMainContent(){
         driver.switchTo().defaultContent();
     }
-
-    protected void closeAdIFrame(By adFrameLocator, By closeAdButton){
-        switchToFrame(adFrameLocator);
-        clickOn(closeAdButton);
-        switchToMainFrame();
-    }
-
 }
