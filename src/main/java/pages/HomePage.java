@@ -10,6 +10,7 @@ public class HomePage extends BasePage{
     private final By deleteAccountButton = By.xpath("//a[text()=' Delete Account']");
     private final By logoutButton = By.xpath("//a[contains(@href,'logout')]");
     private final By contactUsButton = By.xpath("//a[contains(@href,'contact_us')]");
+    private final By testCasesButton = By.xpath("//li/a[@href='/test_cases']");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -28,5 +29,8 @@ public class HomePage extends BasePage{
     }
     public void clickOnContactUs(){
         clickOn(contactUsButton);
+    }
+    public void clickOnTestCases(){
+        clickOn(testCasesButton);
     }
 }

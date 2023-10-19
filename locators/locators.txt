@@ -81,3 +81,13 @@ submitButton = By.name("submit");
 
 Assert - Visible - //div[@class='contact-form']/div[contains(text(),'Success!')]
 btnHome = //a[@class='btn btn-success']
+
+/////TC7 - TEST CASES
+
+//HOMEPAGE
+testCasesButton = //li/a[@href='/test_cases']
+/TEST CASES PAGE
+Assert - Visible - //h2/b[text()='Test Cases']
+
+//div[@id='card']//div[@id='dismiss-button']    //inside toprow
+//div[@id='mys-wrapper']//div[@id='dismiss-button']
